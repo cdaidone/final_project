@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PointRider App</title>
+	
+	<link rel="stylesheet" href="css_app/bootstrap.min.css">
+	<link rel="stylesheet" href="css_app/style3.css">
+	
+</head>
+<body>
+	<header>
+	<nav class="navbar navbar-transparent navbar-fixed-top">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+    			<button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse">
+        			<span class="sr-only">Toggle navigation</span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+      			</button>
+    			<div class="collapse navbar-collapse" id="navlink">
+      				<ul class="nav navbar-nav">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About PointRider</a></li>
+                        <li><a href="pages/app.html">App</a></li>
+                    </ul>
+    			</div>
+    			</div>
+    		</div>
+    	</div>
+    </nav>
+</header>
+
+
+
+<h2>PointRider App</h2>
+
+<div id="table_info"></div>
+<script type="text/javascript" src="js/tabletop.js"></script>
+<script type="text/javascript">
+
+window.onload = function() { init() };
+
+  	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1LL66uk_vCT4QrqrXDDgVPm8bi_3nwhQe51N05706sPU/edit?usp=sharing';
+
+	var tabletop = Tabletop.init( { key: '1LL66uk_vCT4QrqrXDDgVPm8bi_3nwhQe51N05706sPU', callback: showInfo } )
+  
+  	tabletop.sheets("Sheet1")
+      
+</script>
+
+</body>
+</html>

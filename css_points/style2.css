@@ -1,0 +1,50 @@
+body {
+	margin: 0;
+	height: 100%;
+}
+
+nav {
+	background-color: transparent;
+	border: 0;
+	border-color: transparent;
+	box-shadow: none;
+	z-index: 999;
+	}
+	
+
+nav {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	}
+	
+.jumbotron {
+	height: 45em;
+	width: 100%;
+	position: absolute;
+	margin: auto;
+	}
+	
+.jumbotron h1 {
+	text-align: center;
+	margin-top: 2em;
+	}
+	
+.jumbtron p {
+	padding-bottom: 3em;
+	}
+
+#features {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	max-width: 1000px;
+	height: 100%;
+	padding-top: 55em;
+	height: 100%;
+	width: 100%;
+	}
+
+#features h2 {
+	text-align: center;
+	margin-bottom: 2em;
+	}
