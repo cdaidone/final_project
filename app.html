@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PointRider</title>
+	
+	<!-- Bootstrap -->
+	<link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" />
+	<link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
+    
+    <!--Stylesheets-->
+	<link href="assets/css/get-shit-done.css" rel="stylesheet" />  
+    <link href="assets/css/demo2.css" rel="stylesheet" />
+    
+    <!-- Fonts & Icons -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http:fonts.googleapis.com/css?family=Roboto:400,700,300' rel="stylesheet" type="text/css">
+    
+    <!--Javascript/JQuery-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/tabletop.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
+</script>
+	
+</head>
+<body>
+	<div id="navbar-full">
+    <div id="navbar">
+    <!--    
+        navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange  
+        -->
+        <nav class="navbar navbar-ct-blue navbar-transparent navbar-top" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="test.html">PointRider</a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="app.html">App</a></li>
+              </ul>
+               <form class="navbar-form navbar-left navbar-search-form" role="search">                  
+                 <div class="form-group">
+                      <input type="text" value="" class="form-control" placeholder="Search...">
+                 </div> 
+              </form>
+              <!--
+              <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Register</a></li>
+                    
+                    <li><button href="#" class="btn btn-round btn-default">Sign in</button></li>
+               </ul>
+              -->
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    </div><!--  end navbar -->
+
+</div> <!-- end menu-dropdown -->
+<div class="container tim-container" style="max-width:800px; padding-top:100px">
+       <h1 class="text-center">About PointRider <br><small class="subtitle">The ultimate tool for captains and coaches with Intercollegiate Horse Show Association teams.</small></h1>
+       <p>As a captain of an IHSA team that has thirty riders on it, it can become overwhelming trying to remember who has how many points. After countless shows guessing how many points a rider had and quickly grabbing my phone to pull up the updated point document, I recognized the need to have a single location for captains to quickly access their team points on their phones and other devices.</p>
+
+		<p>So to all the other IHSA team coaches and captains out there, here's to you and possibly the end of riders pointing out of their division out of the blue!</p>
+           <!--     end extras -->        
+    </div>
+
+
+<div class="fresh-table full-color-blue">
+    <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange                  
+            Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
+    -->
+    
+        <div class="toolbar">
+            <img src="assets/img/PR_logowhite.png">
+        </div>
+        
+        <!-- <table id="fresh-table" class="table"> -->
+		<table id="points" class="table"></table>
+</div>
+
+
+<script>
+/* Data */
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1LL66uk_vCT4QrqrXDDgVPm8bi_3nwhQe51N05706sPU/pubhtml?gid=0&single=true';
+
+var tabletop;
+
+Tabletop.init( { key: public_spreadsheet_url,
+		callback: drawTable } );
+
+function drawTable(sheets, tabletop) {
+		var sheet = sheets['Sheet1'],
+		column_names = sheet.column_names;
+		var table = $("#points");
+
+		var header = $("<thead></thead>");
+		for (var i = 0; i < column_names.length; i++) {
+          $("<th></th>").text(column_names[i]).appendTo(header);
+		}
+		table.append(header);
+        
+		var tbody = $("<tbody></tbody>");
+		for (var i = 0; i < sheet.elements.length; i++) {
+				var row = sheet.elements[i];
+				var html_row = $("<tr></tr>");
+				for (var j = 0; j < column_names.length; j++) {
+						var column_name = column_names[j];
+            $("<td></td>").text(row[column_name]).appendTo(html_row);
+				}
+				tbody.append(html_row);
+		}
+    table.append(tbody);
+}
+
+        var $table = $('#points'),
+            $alertBtn = $('#alertBtn'),
+            full_screen = false;
+            
+        $().ready(function(){
+            $table.bootstrapTable({
+                toolbar: ".toolbar",
+    
+                showRefresh: true,
+                search: false,
+                showToggle: true,
+                showColumns: true,
+                pagination: true,
+                striped: false,
+                sortable: true,
+                pageSize: 8,
+                pageList: [8,10,25,50,100],
+                
+                formatShowingRows: function(pageFrom, pageTo, totalRows){
+                    //do nothing here, we don't want to show the text "showing x of y from..." 
+                },
+                formatRecordsPerPage: function(pageNumber){
+                    return pageNumber + " rows visible";
+                },
+                icons: {
+                    refresh: 'fa fa-refresh',
+                    toggle: 'fa fa-th-list',
+                    columns: 'fa fa-columns',
+                    detailOpen: 'fa fa-plus-circle',
+                    detailClose: 'fa fa-minus-circle'
+                }
+            });
+        });
+    
+        
+    
+        function operateFormatter(value, row, index) {
+            return [
+                '<a rel="tooltip" title="Like" class="table-action like" href="javascript:void(0)" title="Like">',
+                    '<i class="fa fa-heart"></i>',
+                '</a>',
+                '<a rel="tooltip" title="Edit" class="table-action edit" href="javascript:void(0)" title="Edit">',
+                    '<i class="fa fa-edit"></i>',
+                '</a>',
+                '<a rel="tooltip" title="Remove" class="table-action remove" href="javascript:void(0)" title="Remove">',
+                    '<i class="fa fa-remove"></i>',
+                '</a>'
+            ].join('');
+        }
+    
+        window.operateEvents = {
+            'click .like': function (e, value, row, index) {
+                alert('You click like icon, row: ' + JSON.stringify(row));
+                console.log(value, row, index);
+            },
+            'click .edit': function (e, value, row, index) {
+                console.log(value, row, index);    
+            },
+            'click .remove': function (e, value, row, index) {
+                alert('You click remove icon, row: ' + JSON.stringify(row));
+                console.log(value, row, index);
+            }
+        };
+</script>
+
+</body>
+</html>
