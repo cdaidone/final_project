@@ -6,23 +6,16 @@
 	<title>PointRider</title>
 	
 	<!-- Bootstrap -->
-	<link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" />
-	<link href="bootstrap3/css/bootstrap.css" rel="stylesheet" />
+	<link href="bootstrap3/css/bootstrap.css" rel="stylesheet" >
+	<link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" >
     
     <!--Stylesheets-->
-	<link href="assets/css/get-shit-done.css" rel="stylesheet" />  
-    <link href="assets/css/demo2.css" rel="stylesheet" />
+	<link href="assets/css/get-shit-done.css" rel="stylesheet" >  
+    <link href="assets/css/demo2.css" rel="stylesheet" >
     
     <!-- Fonts & Icons -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http:fonts.googleapis.com/css?family=Roboto:400,700,300' rel="stylesheet" type="text/css">
-    
-    <!--Javascript/JQuery-->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/tabletop.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
-	<script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
-</script>
 	
 </head>
 <body>
@@ -41,13 +34,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="test.html">PointRider</a>
+              <a class="navbar-brand" href="test.html" style="color: #1084ff;">PointRider</a>
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="app.html">App</a></li>
+                <li class="active"><a href="app.html" style="color: #1084ff;">App</a></li>
               </ul>
                <form class="navbar-form navbar-left navbar-search-form" role="search">                  
                  <div class="form-group">
@@ -67,16 +60,47 @@
     </div><!--  end navbar -->
 
 </div> <!-- end menu-dropdown -->
-<div class="container tim-container" style="max-width:800px; padding-top:100px">
-       <h1 class="text-center">About PointRider <br><small class="subtitle">The ultimate tool for captains and coaches with Intercollegiate Horse Show Association teams.</small></h1>
-       <p>As a captain of an IHSA team that has thirty riders on it, it can become overwhelming trying to remember who has how many points. After countless shows guessing how many points a rider had and quickly grabbing my phone to pull up the updated point document, I recognized the need to have a single location for captains to quickly access their team points on their phones and other devices.</p>
+<div class="container tim-container" style="max-width:800px; padding-top:25px; padding-bottom: 100px; height: 250px;">
 
-		<p>So to all the other IHSA team coaches and captains out there, here's to you and possibly the end of riders pointing out of their division out of the blue!</p>
-           <!--     end extras -->        
-    </div>
+	<h2 class="text-center">IHSA Points<br><small>Click below to see the amount of points earned for each ribbon awarded.</small></h2>
+       
+    <div class="row" id="places">
+       	<div class="col-md-2">
+       		<button href="#fakelink" class="btn btn-block btn-md  btn-default" style="color: #1084ff; border-color: #1084ff;" id="1st">1st Place</button>
+       		<p id="1">7 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="2nd">2nd Place</button>
+       		<p id="2">5 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="3rd">3rd Place</button>
+       		<p id="3">4 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="4th">4th Place</button>
+       		<p id="4">3 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="5th">5th Place</button>
+       		<p id="5">2 Points</p>
+       	</div>
+       	<div class="col-md-2">
+       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="6th">6th Place</button>
+       		<p id="6">1 Point</p>
+       	</div>
+    </div>    
+</div>
+<div>
+	<button class="btn btn-block btn-lg btn-info btn-fill" id="showtable">Show Team Points</button>
+</div>
 
+<div class="wrapper">
+	    <div class="container">
+	        <div class="row">
+	            <div class="col-md-10 col-md-offset-1">
 
-<div class="fresh-table full-color-blue">
+<div class="fresh-table full-color-" style="background-color: #1084ff";>
     <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange                  
             Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
     -->
@@ -89,21 +113,28 @@
 		<table id="points" class="table"></table>
 </div>
 
+			</div><!-- close col -->
+		</div><!-- close "row" -->
+	</div><!-- close "container" -->
+</div><!-- close "wrapper" -->
+
+<!--Javascript/JQuery-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/tabletop.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
+	<script type="text/javascript" src="assets/js/points.js"></script>
 
 <script>
 /* Data */
-  var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1LL66uk_vCT4QrqrXDDgVPm8bi_3nwhQe51N05706sPU/pubhtml?gid=0&single=true';
-
-var tabletop;
-
-Tabletop.init( { key: public_spreadsheet_url,
+	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1LL66uk_vCT4QrqrXDDgVPm8bi_3nwhQe51N05706sPU/pubhtml?gid=0&single=true';
+	var tabletop;
+	Tabletop.init( { key: public_spreadsheet_url,
 		callback: drawTable } );
-
-function drawTable(sheets, tabletop) {
+	function drawTable(sheets, tabletop) {
 		var sheet = sheets['Sheet1'],
 		column_names = sheet.column_names;
 		var table = $("#points");
-
 		var header = $("<thead></thead>");
 		for (var i = 0; i < column_names.length; i++) {
           $("<th></th>").text(column_names[i]).appendTo(header);
@@ -122,7 +153,6 @@ function drawTable(sheets, tabletop) {
 		}
     table.append(tbody);
 }
-
         var $table = $('#points'),
             $alertBtn = $('#alertBtn'),
             full_screen = false;
@@ -131,10 +161,10 @@ function drawTable(sheets, tabletop) {
             $table.bootstrapTable({
                 toolbar: ".toolbar",
     
-                showRefresh: true,
+                showRefresh: false,
                 search: false,
-                showToggle: true,
-                showColumns: true,
+                showToggle: false,
+                showColumns: false,
                 pagination: true,
                 striped: false,
                 sortable: true,
@@ -157,35 +187,6 @@ function drawTable(sheets, tabletop) {
             });
         });
     
-        
-    
-        function operateFormatter(value, row, index) {
-            return [
-                '<a rel="tooltip" title="Like" class="table-action like" href="javascript:void(0)" title="Like">',
-                    '<i class="fa fa-heart"></i>',
-                '</a>',
-                '<a rel="tooltip" title="Edit" class="table-action edit" href="javascript:void(0)" title="Edit">',
-                    '<i class="fa fa-edit"></i>',
-                '</a>',
-                '<a rel="tooltip" title="Remove" class="table-action remove" href="javascript:void(0)" title="Remove">',
-                    '<i class="fa fa-remove"></i>',
-                '</a>'
-            ].join('');
-        }
-    
-        window.operateEvents = {
-            'click .like': function (e, value, row, index) {
-                alert('You click like icon, row: ' + JSON.stringify(row));
-                console.log(value, row, index);
-            },
-            'click .edit': function (e, value, row, index) {
-                console.log(value, row, index);    
-            },
-            'click .remove': function (e, value, row, index) {
-                alert('You click remove icon, row: ' + JSON.stringify(row));
-                console.log(value, row, index);
-            }
-        };
 </script>
 
 </body>

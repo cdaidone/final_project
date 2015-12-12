@@ -1037,6 +1037,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border-color: #9A9A9A;
 }
 
+.fresh-table {
+	padding-left: 2em;
+}
+
 .fresh-table .dropdown-menu {
   visibility: hidden;
   margin: 0;
