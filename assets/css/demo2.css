@@ -1,3 +1,7 @@
+html {
+	max-width: 1600px;
+	margin: 0 auto;
+	}
 body {
 	background: #E6E6EA;
 	}
@@ -87,19 +91,32 @@ h2 small {
 	background-color: #FE4A49;
 	border-color: #FE4A49;
 	}
-	
-table {
-  border-collapse: seperate; 
-  /* the options are collapse and separate - try both */
-  padding: 10px;
+
+#instructions {
+	width: 50%;
+	text-align: center;
+	margin-left: 12em;
+	color:#1084ff; 
+	border-color:#1084ff;
+	}
+
+#qualify {
+	width: 50%;
+	text-align: center;
+	color:#1084ff; 
+	border-color:#1084ff;	
 }
 
+#logo {
+	padding-left: 15em;
+	padding-bottom: 2em;
+	}
 
 .main{
     position: relative;
     z-index: 4;
 }
-*/
+
 .main{
     background-color: #FFFFFF;
 }
@@ -314,23 +331,51 @@ table {
     width: 100%;
     position: absolute;  
 }
+/* Media Queries */
+@media (max-width: 1400px){
+	parallax-pro >img {
+		width: 150%;
+		}
+	.container tim-container { height: 300px;}
+	#showtable {margin-left: 25em;}
+	}
+
+@media (max-width: 1200px) {
+	parallax-pro >img {
+		width: 150%;
+		}
+	#showtable {margin-left: 21em;}
+	}
 
 @media (max-width: 1010px){
     .parallax-pro > img{
-/*        height: 100%; */
        width: 150%;
     }
     .container tim-container { height: 400px;}
     #showtable { margin-top: 20em; margin-bottom: 2em; margin-left: auto; width: 100%;}
+    #logo {margin-left: 0;}
+    #instructions {margin-left: 12em;}
 }
 
-@media (max-width: 1020px){
-	.parallax-pro > img {
-	width: 150%;
+@media (max-width: 990px) {
+	#logo {margin-left: -2em;}
+    #instructions {width: 25%; margin-left: 19em;}
+    #qualify {width: 25%; margin-left: 19em;}
+}
+
+
+@media (max-width: 600px) {
+	#logo {margin-left: -7em;}
+    #instructions {width: 25%; margin-left: 15em;}
+    #qualify {width: 25%; margin-left: 15em;}
 	}
-	.container tim-container { height: 400px;}
-	#showtable { margin-top: 18em; margin-bottom: 2em; margin-left: auto; width: 100%;}
+
+
+@media (max-width: 500px){
+	#logo {margin-left: -14em;}
+	#instructions {width: 35%; margin-left: 8em;}
+	#qualify {width: 35%; margin-left: 8em;}
+	#showtable {margin-top: 25em;}
 	}
-	
 
 	

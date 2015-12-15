@@ -6,7 +6,7 @@
 	<title>PointRider</title>
 	
 	<!-- Bootstrap -->
-	<link href="bootstrap3/css/bootstrap.css" rel="stylesheet" >
+	<link href="assets/css/bootstrap.css" rel="stylesheet" >
 	<link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" >
     
     <!--Stylesheets-->
@@ -15,18 +15,15 @@
     
     <!-- Fonts & Icons -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http:fonts.googleapis.com/css?family=Roboto:400,700,300' rel="stylesheet" type="text/css">
 	
 </head>
 <body>
 	<div id="navbar-full">
     <div id="navbar">
-    <!--    
-        navbar-default can be changed with navbar-ct-blue navbar-ct-azzure navbar-ct-red navbar-ct-green navbar-ct-orange  
-        -->
+  
         <nav class="navbar navbar-ct-blue navbar-transparent navbar-top" role="navigation">
           <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
+           
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -34,59 +31,58 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="test.html" style="color: #1084ff;">PointRider</a>
+              <a class="navbar-brand" href="index.html" style="color: #1084ff;">PointRider</a>
             </div>
         
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="app.html" style="color: #1084ff;">App</a></li>
               </ul>
-               <form class="navbar-form navbar-left navbar-search-form" role="search">                  
-                 <div class="form-group">
-                      <input type="text" value="" class="form-control" placeholder="Search...">
-                 </div> 
-              </form>
-              <!--
-              <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Register</a></li>
-                    
-                    <li><button href="#" class="btn btn-round btn-default">Sign in</button></li>
-               </ul>
-              -->
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
+            </div>
+          </div>
         </nav>
-    </div><!--  end navbar -->
+    </div>
 
-</div> <!-- end menu-dropdown -->
-<div class="container tim-container" style="max-width:800px; padding-top:25px; padding-bottom: 100px; height: 250px;">
+</div> 
+<div class="container tim-container" style="max-width:800px; padding-top:25px; padding-bottom: 100px; height: 350px;">
+	<div>
+		<img src="assets/img/PR_logobig.png" alt="PointRider" id="logo">
+	</div>
+	<div class="row" id="topbuttons">
+		<div class="col-md-6">
+			<button type="button" class="btn btn-default btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="Welcome to PointRider! Use this app to help keep track of rider points and to help strategize your use of point riders. Below, you can click on different places to remind you of the points awarded for each place. You can also click on the 'Show Team Points' button to toggle the team points table. As you update your Google Sheets document, this table is automatically updated. Good luck!" id="instructions">Instructions</button>
+		</div>
+		<div class="col-md-6">
+			<button type="button" class="btn btn-default btn-tooltip" data-toggle="tooltip" data-placement="bottom" title="In order to qualify for Regional Finals and move up to the next division, riders in the following divisions must earn the listed amount of points: Open | Intermediate | Novice | Adv. WTC | Walk Trot (36 Points) and Beg. WTC (18 Points)." id="qualify">Qualify</button>
+		</div>
+	</div>
+			
 
 	<h2 class="text-center">IHSA Points<br><small>Click below to see the amount of points earned for each ribbon awarded.</small></h2>
        
     <div class="row" id="places">
        	<div class="col-md-2">
-       		<button href="#fakelink" class="btn btn-block btn-md  btn-default" style="color: #1084ff; border-color: #1084ff;" id="1st">1st Place</button>
+       		<button class="btn btn-block btn-md  btn-default" style="color: #1084ff; border-color: #1084ff;" id="1st">1st Place</button>
        		<p id="1">7 Points</p>
        	</div>
        	<div class="col-md-2">
-       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="2nd">2nd Place</button>
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="2nd">2nd Place</button>
        		<p id="2">5 Points</p>
        	</div>
        	<div class="col-md-2">
-       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="3rd">3rd Place</button>
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="3rd">3rd Place</button>
        		<p id="3">4 Points</p>
        	</div>
        	<div class="col-md-2">
-       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="4th">4th Place</button>
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="4th">4th Place</button>
        		<p id="4">3 Points</p>
        	</div>
        	<div class="col-md-2">
-       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="5th">5th Place</button>
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="5th">5th Place</button>
        		<p id="5">2 Points</p>
        	</div>
        	<div class="col-md-2">
-       		<button href="#fakelink" class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="6th">6th Place</button>
+       		<button class="btn btn-block btn-md btn-default" style="color: #1084ff; border-color: #1084ff;" id="6th">6th Place</button>
        		<p id="6">1 Point</p>
        	</div>
     </div>    
@@ -100,24 +96,36 @@
 	        <div class="row">
 	            <div class="col-md-10 col-md-offset-1">
 
-<div class="fresh-table full-color-" style="background-color: #1084ff";>
-    <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange                  
-            Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
-    -->
+<div class="fresh-table full-color-" style="background-color: #1084ff;">
     
         <div class="toolbar">
-            <img src="assets/img/PR_logowhite.png">
+            <img src="assets/img/PR_logowhite.png" alt="PointRider">
         </div>
-        
-        <!-- <table id="fresh-table" class="table"> -->
+
 		<table id="points" class="table"></table>
 </div>
 
-			</div><!-- close col -->
-		</div><!-- close "row" -->
-	</div><!-- close "container" -->
-</div><!-- close "wrapper" -->
+			</div>
+		</div>
+	</div>
+</div>
 
+<footer class="footer" style="background-color: #666; height: 100%; width: 100%; text-align: center; padding-top: 2em; padding-bottom: 2em; margin-bottom: 0;">
+      <div class="container">
+      	<div class="row">
+      		<div class="col-md-4">
+        		<p style="color: #fff;">By Carina Daidone</p>
+        	</div>
+        	<div class="col-md-4">
+        		<img src="assets/img/PR_logowhite.png" alt="PointRider">
+        	</div>
+        	<div class="col-md-4">
+        		<p><a href="http://ihsainc.com" target="#" style="color: #fff;">Learn more about IHSA</a></p>
+        	</div>
+        </div>
+      </div>
+    </footer>
+    
 <!--Javascript/JQuery-->
     <script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/tabletop.js"></script>
@@ -125,7 +133,9 @@
 	<script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
 	<script type="text/javascript" src="assets/js/points.js"></script>
 
-<script>
+<script type="text/javascript">
+	$('.btn-tooltip').tooltip();
+    $('.label-tooltip').tooltip();
 /* Data */
 	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1LL66uk_vCT4QrqrXDDgVPm8bi_3nwhQe51N05706sPU/pubhtml?gid=0&single=true';
 	var tabletop;

@@ -1513,20 +1513,6 @@
             html.push('</tr>');
         }
 
-        // show no records
-        if (!html.length) {
-            html.push('<tr class="no-records-found">',
-                sprintf('<td colspan="%s">%s</td>',
-                    this.$header.find('th').length, this.options.formatNoMatches()),
-                '</tr>');
-        }
-
-        this.$body.html(html.join(''));
-
-        if (!fixedScroll) {
-            this.scrollTo(0);
-        }
-
         // click to select by column
         this.$body.find('> tr[data-index] > td').off('click dblclick').on('click dblclick', function (e) {
             var $td = $(this),

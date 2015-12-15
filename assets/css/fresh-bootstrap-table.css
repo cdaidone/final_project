@@ -1277,7 +1277,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .fresh-table .pagination > li.active > span:hover,
 .fresh-table .pagination > li.active > a:focus,
 .fresh-table .pagination > li.active > span:focus {
-  color: #898989;
+  color: #fff;
   border-color: #AAAAAA;
   background-color: transparent;
   opacity: 1;
@@ -1387,7 +1387,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .fresh-table[class*="full-color-"] .fixed-table-header,
 .fresh-table[class*="full-color-"] .fixed-table-body,
 .fresh-table[class*="full-color-"] table {
-  color: #FFFFFF;
+  color: #052d56;
 }
 .fresh-table[class*="full-color-"] .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: rgba(255, 255, 255, 0.15);
